@@ -49,6 +49,10 @@
 <lastmod>2020-02-02T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/jekyll-theme-memoirs/%E6%97%A0%E9%A2%981/</loc>
+<lastmod>2021-11-06T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/jekyll-theme-memoirs/about</loc>
 </url>
 <url>
@@ -74,5 +78,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/jekyll-theme-memoirs/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/jekyll-theme-memoirs/page3/</loc>
 </url>
 </urlset>
