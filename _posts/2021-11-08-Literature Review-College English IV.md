@@ -1,6 +1,6 @@
 ---
 title: Literature Review of College English IV's thesis
-tags: 英语笔记 'College English IV'
+tags: 英语笔记 College\ English\ IV
 ---
 
 > This is the literature review & reference part of the ongoing College English IV course's academic thesis writing of our group. Future updates of our thesis would also be posted here.
