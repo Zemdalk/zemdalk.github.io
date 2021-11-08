@@ -1,6 +1,6 @@
 ---
 title: Literature Review of College English IV's thesis
-tags: A-英语笔记 College_English_IV
+tags: A-课程笔记 College_English_IV
 key: Literature_Review_of_College_English_IV
 ---
 
