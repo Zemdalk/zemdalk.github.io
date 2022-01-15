@@ -6,10 +6,10 @@ mathjax_autoNumber: true
 key: Big Potential阅读节录
 sharing: true
 typora-root-url: ..
-article_header:
-  type: cover
-  image:
-    src: /assets/images/阅读/BigPotentialCover.png
+# article_header:
+#   type: cover
+#   image:
+#     src: /assets/images/阅读/BigPotentialCover.png
 ---
 
 > 书名：Big Potential: How transforming the Pursuit of Success Raises Our Achievement, Happiness and Well-Being
@@ -17,6 +17,8 @@ article_header:
 > 作者：Shawn Achor
 
 <!--more-->
+
+![Big Potential](/assets/images/阅读/BigPotentialCover.png)
 
 最近正在阅读Hamed赠与我的这本书。节录一些能反映作者中心思想的句子和我认为不错的句子。括号中为页码。
 
