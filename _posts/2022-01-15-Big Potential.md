@@ -20,7 +20,7 @@ typora-root-url: ..
 
 <!-- ![Big Potential](/assets/images/阅读/BigPotentialCover.png) -->
 
-<img src="/assets/images/阅读/BigPotentialCover.png" alt="Big Potential" style="zoom: 50%;margin: 0 auto;" />
+<center><img src="/assets/images/阅读/BigPotentialCover.png" alt="Big Potential" style="zoom: 50%;" /></center>
 
 最近正在阅读Hamed赠与我的这本书。节录一些能反映作者中心思想的句子和我认为不错的句子。括号中为页码。
 
