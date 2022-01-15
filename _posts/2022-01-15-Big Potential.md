@@ -50,3 +50,5 @@ Been reading this book that Hamed gave me recently. Excerpt some sentences that 
 - In other words, connecting with high-potential people dramatically increases your likelihood of high-potential outcomes. (22)
 
 - Big Potential is about gaining a competitive advantage not by limiting others' success rates, but by raising them. (29)
+
+- A *Virtuous Cycle* is an upward spiral of potential whereby with each success, you garner more resources, which, in turn, allow you to achieve greater and greater successes.
