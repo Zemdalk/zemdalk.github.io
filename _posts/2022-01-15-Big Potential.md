@@ -44,3 +44,5 @@ Been reading this book that Hamed gave me recently. Excerpt some sentences that 
 - Indeed, their research found that a team on which each person was merely average in their individual abilities but possessed a collective intelligence would continually exhibit higher success rates than a team of individual geniuses. (19)
 
 - In other words, connecting with high-potential people dramatically increases your likelihood of high-potential outcomes. (22)
+
+- Big Potential is about gaining a competitive advantage not by limiting others' success rates, but by raising them. (29)
