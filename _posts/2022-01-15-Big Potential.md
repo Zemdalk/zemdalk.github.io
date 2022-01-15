@@ -20,6 +20,8 @@ typora-root-url: ..
 
 ![Big Potential](/assets/images/阅读/BigPotentialCover.png)
 
+<img src="/assets/images/阅读/BigPotentialCover.png" alt="Big Potential" style="zoom: 50%;margin: 0 auto;" />
+
 最近正在阅读Hamed赠与我的这本书。节录一些能反映作者中心思想的句子和我认为不错的句子。括号中为页码。
 
 Been reading this book that Hamed gave me recently. Excerpt some sentences that reflect the author's central idea and sentences that I think are good. Numbers in the bracket are page numbers.
