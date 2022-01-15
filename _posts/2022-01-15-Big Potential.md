@@ -28,6 +28,8 @@ Been reading this book that Hamed gave me recently. Excerpt some sentences that 
 
 ---
 
+# Part I. THE BIG PROBLEM WITH SMALL POTENTIAL
+
 ## Chap 1. The Power of Hidden Connections
 
 - The more you help people find their light, the brighter you both will shine. (4)
@@ -51,4 +53,6 @@ Been reading this book that Hamed gave me recently. Excerpt some sentences that 
 
 - Big Potential is about gaining a competitive advantage not by limiting others' success rates, but by raising them. (29)
 
-- A *Virtuous Cycle* is an upward spiral of potential whereby with each success, you garner more resources, which, in turn, allow you to achieve greater and greater successes.
+- A *Virtuous Cycle* is an upward spiral of potential whereby with each success, you garner more resources, which, in turn, allow you to achieve greater and greater successes. (31)
+
+- You can find powerful ways to create Virtuous Cycles of potential by planting these SEEDS(<u>Surround, Expand, Enhance, Defend, Sustain</u>) in your life... Together, these SEEDS themselves create a Virtuous Cycle, lifting the ceiling on your potential higher and higher.(32)
