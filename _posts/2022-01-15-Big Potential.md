@@ -18,7 +18,7 @@ typora-root-url: ..
 
 <!--more-->
 
-![Big Potential](/assets/images/阅读/BigPotentialCover.png)
+<!-- ![Big Potential](/assets/images/阅读/BigPotentialCover.png) -->
 
 <img src="/assets/images/阅读/BigPotentialCover.png" alt="Big Potential" style="zoom: 50%;margin: 0 auto;" />
 
