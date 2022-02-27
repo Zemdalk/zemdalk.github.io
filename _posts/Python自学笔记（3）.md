@@ -1,0 +1,257 @@
+---
+title: Python自学笔记（3）
+tags: A-技术笔记 Python
+mathjax: true
+mathjax_autoNumber: true
+key: Python自学笔记（3）
+sharing: true
+typora-root-url: ..
+---
+
+> 整理一下Python相关内容，方便查阅。
+> 
+> 参考用书：《Python编程：从入门到实践》，作者：Eric Matthes
+
+<!--more-->
+
+# 第8章 文件和异常
+
+## 8.1 读取文件
+
+这一小节中用到两个文件，一个文件是pi_digits.txt，一个文件是pi_million_digits.txt。它们均保存在与本小节编程文件相同的目录下。可点击下面两个链接下载这两个文件。
+
+<a href="/assets/files/pi_digits.txt" download="pi_digits">pi_digits.txt</a>
+
+<a href="/assets/files/pi_million_digits.txt" download="pi_digits">pi_million_digits.txt</a>
+
+### 8.1.1 读取全部文件内容
+
+下面的代码会打开并读取pi_digits.txt文件，并将其内容显示到屏幕上。
+
+``` python
+# file_reader.py
+
+with open('pi_digits.txt') as file_object:  # 打开文件
+    contents = file_object.read()           # 读取文件
+    print(contents.rstrip())                # 打印文件内容
+```
+
+运行结果：
+
+```
+3.1415926535
+  8979323846
+  2643383279
+```
+
+分析程序代码：
+
+- **open()函数**：参数为要打开的文件的<u>相对路径</u>或<u>绝对路径</u>，返回一个表示文件的对象。使用as为这个对象指定别名file_object。
+
+- **with关键字**：它可以在不再需要访问文件后将其关闭。关闭时机由Python自动确定。
+
+> 也可以不用with关键字，使用open()和close()函数配合来打开和关闭文件，但这样如果程序出现bug可能会导致close()函数得不到调用，从而造成数据丢失，因此不建议这样做。
+
+- **read()函数**：文件对象的一个方法，读取这个文件的内容，并将内容作为字符串返回。
+
+- **空行处理**：read()函数到达文件末尾时自动返回一个空字符串，打印时作为空行打印，这样输出的结果就比原文件多了一个空行。因此使用rstrip()方法删除字符串末尾的空白符。
+
+> 当使用其它目录下的文件时，注意在windows系统中文件路径使用反斜线(\\)，在Linux和OS X中使用斜线(/)。
+
+### 8.1.2 逐行读取文件内容
+
+可对文件对象使用for循环来遍历文件的每一行：
+
+``` python
+# file_reader.py
+
+filename = 'pi_digits.txt'
+
+with open(filename) as file_object:
+    for line in file_object:
+        print(line.rstrip())
+```
+
+运行结果：
+
+```
+3.1415926535
+  8979323846
+  2643383279
+```
+
+这里要注意，逐行读取时依然有空行处理，处理的原理和方式与上面相同。
+
+### 8.1.3 创建包含文件各行内容的列表
+
+使用with关键字时，open()返回的文件对象只能在with代码块内使用，因此需要有适当的变量来存储文件内容。可使用函数readlines()将文件各行的内容存储在一个列表中：
+
+``` python
+filename = 'pi_million_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+    print(pi_string[:52] + "...")
+    print(len(pi_string))
+```
+
+运行结果：
+
+```
+3.14159265358979323846264338327950288419716939937510...
+100002
+```
+
+## 8.2 写入文件
+
+下面的程序将创建名为programming.txt的文件，并在其中写入一句话`I love programming.`：
+
+``` python
+filename = 'programming.txt'
+
+with open(filename, 'w') as file_object:
+    file_object.write("I love programming.")
+```
+
+我们来看这段代码中的两个函数：
+
+- **open()函数**：在open()函数中，第一个参数表示要打开的文件，如果文件不存在，则新建该文件。
+
+第二个参数表示文件的打开模式，`'r'`表示以**读取模式**打开，`'r'`表示以**写入模式**打开，`'a'`表示以**附加模式**打开。
+
+值得注意的是，以写入模式打开文件后，文件对象中的内容会被清空，因此后面写入的内容会完全覆盖原文件的内容。如果想要保留原来的内容，承接在原内容之后写入内容，则应当使用附加模式打开。
+
+- **write()函数**：`文件对象.write(str)`会在指定的文件对象中写入字符串str。需要注意两点：① str必须为字符串，如果是数值，请用`str()`转换数据类型；② write()函数写入字符串后**不会换行**，想换行请手动添加`'\n'`。
+
+## 8.3 异常
+
+### 8.3.1 使用try-except-else代码块处理异常
+
+一个常见的错误是，除数为零。这时程序会抛出ZeroDivisionError，并终止运行。如果我们能在代码中提前告诉Python发生这种异常时应该怎么办，就有备无患了：
+
+``` python
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+```
+
+运行结果：
+
+```
+You can't divide by zero!
+```
+
+这时try-except代码块，使用它处理异常的好处：首先，错误提示很友好，不是traceback；其次，如果后面还有代码，程序将继续运行。即，我们可以**使用异常避免崩溃**。
+
+避免崩溃而出现traceback有两个好处：首先，不懂得技术的用户看到traceback会感到迷惑，而看到友好的错误提示信息；其次，懂得技术的程序员看到traceback中包含了许多与源代码相关的信息，这可以被用来展开攻击，隐藏traceback在避免攻击中显得尤为重要。
+
+``` python
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("second number: ")
+    if second_number == 'q':
+        break
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+    else:
+        print(answer)
+```
+
+try-except-else大致的原理是，运行try中的代码块，如果出现了except后面提到的异常，执行except代码块中的内容，如果没有抛出异常，执行else代码块中的内容。这段完成后继续执行后面的程序。
+
+> 如果try中的代码块抛出异常，但不是except后面跟的异常，就会出现traceback并崩溃。
+
+### 8.3.2 处理FileNotFoundError异常
+
+上面提到了ZeroDivisionError，还有一种异常是FileNotFoundError，它发生在尝试打开一个文件而该文件不存在时。例如，假设当前目录中不存在alice.txt文件，那么执行下面的代码：
+
+``` python
+filename = 'alice.txt'
+
+with open(filename) as f_obj:
+    contents = f_obj.read()
+```
+
+会抛出一个含FileNotFoundError异常的trackback。为避免这一点，我们可以将with代码块放入try-except-else语句中。我们下面试图写一个程序，它能计算一个文本中含有多少个单词，为此先介绍split()函数：
+
+split()函数可以将指定的字符串按空白符分隔成一个个单词，将这些单词保存到一个列表中并返回。例如，
+
+``` python
+title = "Alice's adventures in wonderland"
+print(title.split())
+```
+
+运行结果：
+
+```
+["Alice's", 'adventures', 'in', 'wonderland']
+```
+
+我们要计算这几本书的单词数（点击链接可下载）：
+
+<a href="/assets/files/alice.txt" download="alice.txt">alice.txt</a> (Alice's Adventures in Wonderland)
+
+<a href="/assets/files/moby_dick.txt" download="moby_dick.txt">moby_dick.txt</a> (Moby Dick)
+
+<a href="/assets/files/little_women.txt" download="little_women.txt">little_women.txt</a> (Little Women)
+
+还有一本并没有下载的书siddhartha.txt。
+
+代码如下：
+``` python
+def count_words(filename):
+    """计算一个文件大致包含多少个单词"""
+    try:
+        with open(filename) as f_obj:
+            contents = f_obj.read()
+    except FileNotFoundError:
+        print("Sorry, the file " + filename + " does not exist.")
+    else:
+        # 计算文件大致包含多少个单词
+        words = contents.split()
+        num_words = len(words)
+        print("The file " + filename + " has about " + str(num_words) + " words.")
+
+filenames  = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+    count_words(filename)
+```
+
+运行结果：
+
+```
+The file alice.txt has about 26436 words.
+Sorry, the file siddhartha.txt does not exist.
+The file moby_dick.txt has about 214422 words.
+The file little_women.txt has about 187000 words.
+```
+
+下面介绍**pass语句**。我们将except代码块修改为
+
+``` python
+...
+except FileNotFoundError:
+    pass
+...
+```
+
+这时遇到FileNotFoundError异常时程序便会“一声不吭”，继续执行，运行结果变为：
+
+```
+The file alice.txt has about 26436 words.
+The file moby_dick.txt has about 214422 words.
+The file little_women.txt has about 187000 words.
+```
+
