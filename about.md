@@ -10,9 +10,9 @@ key: page-about
 
 考虑做个自己的网址导航。这儿先零碎地放一些东西吧。
 
-- **PYNQ开发板教程**：https://pynqdocs.gitbook.io/pynq-tutorial/
+- **PYNQ开发板教程**：[https://pynqdocs.gitbook.io/pynq-tutorial/](https://pynqdocs.gitbook.io/pynq-tutorial/)
 
-- **PYNQ z2学习资源整理**：https://www.cnblogs.com/beihaixingchen/p/13920817.html
+- **PYNQ z2学习资源整理**：[https://www.cnblogs.com/beihaixingchen/p/13920817.html](https://www.cnblogs.com/beihaixingchen/p/13920817.html)
 
 
 
