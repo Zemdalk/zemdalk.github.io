@@ -12,6 +12,7 @@ key: page-about
 
 - **PYNQ开发板教程**：https://pynqdocs.gitbook.io/pynq-tutorial/
 
+- **PYNQ z2学习资源整理**：https://www.cnblogs.com/beihaixingchen/p/13920817.html
 
 
 
