@@ -14,9 +14,9 @@ key: page-about
 
 - **PYNQ z2学习资源整理**：[https://www.cnblogs.com/beihaixingchen/p/13920817.html](https://www.cnblogs.com/beihaixingchen/p/13920817.html)
 
+- **PYNQ(ZYNQ)入门资料合集**：[https://zhuanlan.zhihu.com/p/92935984](https://zhuanlan.zhihu.com/p/92935984)
 
-
-
+- **中國哲學書電子化計劃**：[https://ctext.org/zh](https://ctext.org/zh)
 
 
 
