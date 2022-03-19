@@ -18,7 +18,11 @@ key: page-about
 
 - **中國哲學書電子化計劃**：[https://ctext.org/zh](https://ctext.org/zh)
 
+- **Commit message 和 Change log 编写指南**：[https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
+- **wordle unlimited**：[https://www.wordleunlimited.com/](https://www.wordleunlimited.com/)
+
+- **绘制自动机的工具**：[https://markusfeng.com/projects/graph/](https://markusfeng.com/projects/graph/)
 
 <!-- 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
