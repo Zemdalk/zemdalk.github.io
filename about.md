@@ -24,6 +24,10 @@ key: page-about
 
 - **绘制自动机的工具**：[https://markusfeng.com/projects/graph/](https://markusfeng.com/projects/graph/)
 
+--------------------2022.03.24--------------------
+
+一个有趣的事实：**男澡堂67号位**计费器损坏，而且起步价也不收，可以白嫖。
+
 <!-- 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
