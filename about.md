@@ -24,6 +24,8 @@ key: page-about
 
 - **绘制自动机的工具**：[https://markusfeng.com/projects/graph/](https://markusfeng.com/projects/graph/)
 
+- **OpenCV Tutorial**：[https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)
+
 --------------------2022.03.24--------------------
 
 一个有趣的事实：**男澡堂67号位**计费器损坏，而且起步价也不收，可以白嫖。
