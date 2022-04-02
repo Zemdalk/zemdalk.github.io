@@ -144,7 +144,7 @@ http-server
 
 这些文件就可以下载到手机中了。
 
-## 关于Termux，多说两句
+# 关于Termux，多说两句
 
 Termux可以在手机上模拟Linux，那就可以写一些简单的C程序或者python程序了，比如我们可以用下面的命令安装clang包，支持C程序编译和运行
 
