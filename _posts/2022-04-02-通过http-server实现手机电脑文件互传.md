@@ -165,3 +165,7 @@ pkg install vim
 用gcc编译运行这个程序，就和电脑运行一模一样：
 
 <center><img src="/assets/images/http-server/11.png" alt="11" style="zoom: 40%;" /></center>
+
+# 后续
+
+之后想使用http-server，如果在电脑上，到想要共享的路径下打开cmd，输入`http-server`即可；如果在手机上，打开Termux，转到想要共享的路径下，输入`http-server`即可。
