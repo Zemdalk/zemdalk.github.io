@@ -22,7 +22,7 @@ Also, all the Chinese version I've found are scanned version. Therefore I'll jus
 
 C++ is a superset of C. C++ joins 3 separate programming categories: **the procedural language, the object-oriented language and generic programming**.
 
-## **C Programming Philosophy**
+### **C Programming Philosophy**
 
 In general, computer languages deal with two cocepts--data and algorithms. Like most mainstream languages when C was created, C is a *procedural* language. That means is emphasizes the algorithm side of programming.
 
@@ -30,7 +30,7 @@ C includes features to facilitate *structured programming* approach, making it r
 
 *Top-down* design was another feature of C. The idea is to break a large program into smaller, more manageable tasks. C uses programming unit called *functions* to implemente this idea.
 
-## **The C++ Shift: Object-Oriented Programming**
+### **The C++ Shift: Object-Oriented Programming**
 
 Unlike procedural programming, which emphasizes algorithms, OOP emphasizes the data. The idea is to design data forms that correspond to the essential features of a problem.
 
@@ -40,13 +40,13 @@ The OOP approach to program design is to first design classes, then proceed to d
 
 There are other features of OOP such as information hiding, polymorphism, inheritance and etc.
 
-## **C++ and Generic Programming**
+### **C++ and Generic Programming**
 
 The term *generic* refres to code that is type independent. Generic programming involves extending the language so that you can write a function for a generic type once and use it for a variety of actual types.
 
 # Chpt 2. Setting Out to C++
 
-## Namespaces
+### Namespaces
 
 If you use `iostream` instead of `iostream.h`, you should use the following namespace directive to make the definitions in `iostream` available to your program:
 
@@ -69,7 +69,7 @@ The following line means you can use names defined in the `std` namespace withou
 using namespace std;
 ```
 
-## C++ Output with `cout`
+### C++ Output with `cout`
 
 ```cpp
 cout << "Come up and C++ me some time."
@@ -77,7 +77,7 @@ cout << "Come up and C++ me some time."
 
 The `<<` notation indicates that the statement is sending the string to `cout`; the symbols point the way the information flows. `cout` is a predefined object that knows how to display a variety of things, intcluding strings, numbers and individual characters. Thus, you can say that it inserts a string into the output stream.
 
-## Using `cin`
+### Using `cin`
 
 ``` cpp
 cin >> carrots;
@@ -87,7 +87,7 @@ Just as C++ considers output to be a stream of characters flowing out of the pro
 
 # Chpt 3. Dealing with Data
 
-## Naming Rules
+### Naming Rules
 
 One rule is worth noticing:
 
@@ -95,7 +95,7 @@ Names beginning with two underscore(_) characters or with an underscore characte
 
 Using a name such as `__time_stop` or `_Donut` doesn't produce a compiler error; instead, it leads to undefined behavior. In other words, there's no telling what the result will be.
 
-## The `sizeof` Operator and the `climits` Header File
+### The `sizeof` Operator and the `climits` Header File
 
 You can apply the `sizeof` operator to a **type name** or to a **variable name**.
 
@@ -103,7 +103,7 @@ When you use the `sizeof` operator with a type name, such as `int`, you enclose 
 
 The `climits` header file defines symbolic constants to represent type limits.
 
-## Integer Literals
+### Integer Literals
 
 An integer literal, or constant, is one you write out explicitly, such as 212 or 1776. C++, like C, lets you write integers in three different number bases: base 10, base 8, and base 16.
 
@@ -115,13 +115,13 @@ C++ uses the first digit or two to identify the base of a number constant:
 
 If you want to display a value in headecimal or octal form, you can use `cout` manipulators `dec`, `hex`, and `oct` to display integers in decimal, hexadecimal, and octal formats, respectively.
 
-## `wchar_t`, `char16_t` and `char32_t`
+### `wchar_t`, `char16_t` and `char32_t`
 
 The `wchar_t` type is an integer type with sufficient space to represent the largest extended character set used on the system. This type has the same size and sign properties as one of the other integer types, which is called the *underlying* type. The underlying type depends on the implementation.
 
 Because the sign and size of `wchar_t` can vary from one implementation to another, C++11 introduces the types `char16_t`, which is unsigned and 16 bits, and `char32_t`, which is unsigned and 32 bits. C++11 uses the `u` prefix for `char16_t` character and string constants, like `u'C'` and `u"be good"`. Similarly, it uses the `U` prefix for `char32_t` constants, like `U'R'` and `U"dirty rat"`.
 
-## A member function: `cout.put()`
+### A member function: `cout.put()`
 
 The `cout.put()` function is the first example of an important C++ OOP concept, the *member function*. A member function belongs to a class and describes a method for manipulating class data. The `cout` is an object of class `ostream`. The class has a member function named `put()`. We can use the function with a particular object of the class, such as `cout` object.
 
@@ -129,19 +129,19 @@ To use a class member function with an object of that class, simply use a period
 
 > We'll learn "Objects and Classes" in Chapter 10. Now the only classes we have encountered are `istream` and `ostream` classes.
 
-## The `const` qualifier
+### The `const` qualifier
 
 C++ uses `const` to handle symbolic constants. For example, `const int Months = 12` initialized a constant named `Months` with value of 12.
 
-## Writing Floating-Point Numbers
+### Writing Floating-Point Numbers
 
 C++ has two ways of writing floating-point numbers. The first is the custom way, like `3.14159`. The second method is called E notation, which is like `3.14E-6`(= `0.00000314`). The -6 is called an *exponent*, and the 3.14 is termed the *mantissa*.(You can use both E or e in E notation)
 
-## Floating-Point Constants
+### Floating-Point Constants
 
 By default, floating-point constants such as 8.24 and 2.4E8 are type `double`. If we want a constant to be type `float`, we can use an `f` or `F` suffix. For type `long double`, we can use an `l` or `L` suffix.
 
-## Conversion
+### Conversion
 
 When you try to combine mixed types, C++ converts all the concerned types to the same type.
 
@@ -151,7 +151,7 @@ You can use `(typename) value` or `typename (value)` to complete type cast. The 
 
 C++ also introduces 4 type case operators that are more restrictive in bow they can be used. Ot the four, the `static_cast<>` operator, can be used for converting values from one numeric type to another. Usage: `static_cast<typename> value`. The idea behind is to be more restrictive than the traditional type cast.
 
-## `auto` Declarations in C++11
+### `auto` Declarations in C++11
 
 C++11 introduces a facility that allows the compiler to deduce a type from the type of an initialization value. For this purpose it redefines the meaning of `auto`, a keyword dating back to C, but one hardly ever used.
 
