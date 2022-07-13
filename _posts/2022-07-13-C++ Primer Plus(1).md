@@ -16,7 +16,7 @@ typora-root-url: ..
 
 I have learned the programming language C already, thus I'll only take down new grammars and features in C++ in my notes.
 
-Also, all the Chinese version I've found are scanned version. Therefore I'll just use the English version. A chance to practice my English, not bad!
+Also, all the Chinese versions I've found are scanned version, but I find an English version which is not scanned. Therefore I'll just use the English version. A chance to practice my English, not bad!
 
 # Chpt 1. Getting Started with C++
 
