@@ -158,3 +158,217 @@ C++11 introduces a facility that allows the compiler to deduce a type from the t
 ``` cpp
 auto n = 100;   // n is int
 ```
+
+# Chpt 4. Compound Types
+
+### Arrays
+
+You can use a comma-separated list of values (the *initialization list*) enclosed in braces to initialize an array, like `int yamcosts[3] = {20, 30, 5};`. However, you can **only** use the initialization form when defining the array. You cannot use it later(~~`int hands[4]; hands[4] = {5, 6, 7, 9};`~~) and you cannot assign one array wholesale to another(~~`int cards[4] = {1, 2, 3, 4}; hands = cards;`~~).
+
+You can let the compiler counter number of elements in an array while initializing:
+
+```cpp
+short things[] = {1, 5, 3, 8};
+int num_elements = sizeof things / sizeof (short);
+```
+
+### C-style Strings 
+
+C++ has two ways of dealing with strings. The first is *C-style string*, like `char name[4] = {'S', 'a', 'm', '\0'};`; the second is using C++ `string` class.
+
+For C-style strings, you can just initialize it without denoting the number of characters:
+
+```cpp
+char fish[] = "Bubbles";    // let the compiler count
+```
+
+A tricky point about `cin` is that `cin` uses whitespace(spaces, tabs, and newlines) to delineate a string. This means that `cin` only reads one word when it gets input from a character array. The program [instr1.cpp](instr1.cpp) shows this.
+
+To read input strings a line at a time instead of a word, you should use `istream`(`cin` is its object) class member functions `getline()` and `get()`. The difference is, after reading a line, `getline()` discards the newline character, whereas `get()` leaves it in the input queue.
+
+`get(name, ArSize)` reads input characters from keyboard and stops when input reaches its end or input is longer than `ArSize`. Note that the character `'\n'` will be left in the inpiut queue.
+
+A single `get()` reads one character a time. We can use it to absort the `'\n'` character left by the above function:
+
+``` cpp
+cin.get(name, ArSize);      // read first line
+cin.get();                  // read newline
+cin.get(dessert, ArSize);   // read second line
+```
+
+Another way to use `get()` is to *concatenate*, or join, two class member functions, as follows:
+
+``` cpp
+cin.get(name, ArSize).get();    // concatenate member functions
+```
+
+This is possible because `cin.get(name, ArSize)` returns the `cin` object.
+
+### Use `string` Class
+
+Just use 
+
+```cpp
+string str1;
+```
+
+to declare a string. We can also use `cin` and `cout` to assign or print the value of a string.
+
+The `string` class makes it simpler for some operations to be done. For example, you can assign a string object directly to another. Also you can combine strings using the operator `+`. An advantage of using `string` class is that you don't have to worry about oversizing. `string` objects will automatically resize its size to fit in your input or your operation.
+
+We can use member functions `size()` of `string` class to get the length of a string, which is equivalent to the `strlen()` function from the `<cstring>` header file(the older `<string.h>`).
+
+We can use `getline(cin, stringname)` to get a string from the keyboard. Note that `cin` is an argument of the function, which indicates that this `getline()` function is not the member function method from `istream` class. It takes `cin` as an argument that tells it where to find the input. Also, there isn't an argument for the size of the string because the `string` object automatically resizes to fit the objects, as we've discussed above.
+
+### Structure and Union
+
+You've defined a strcture `inflatable`:
+
+``` cpp
+struct inflatable{
+    char name[20];
+    float volume;
+    double price;
+};
+```
+
+Then you can create variables of type `inflatable`:
+
+```cpp
+inflatable hat;
+```
+
+Notice that you don't have to write `struct` before structure name `inflatable`, which is required in C.
+
+You can use `string` class members within structure definition. Just move the `using` directive before structure definition.
+
+The usage and function of *union* in C++ is the same as is in C.
+
+### Enumerations
+
+*Enumeration* is defined as follows:
+
+```cpp
+enum spectrum {red, orange, yellow, green, blue, violet, indigo, ultraviolet};
+```
+
+It establishes `red`, `orange`, `yellow`, and so on, as symbolic constants for the integer values 0-7. These constants are called *enumerators*.
+
+Notice that only assignment operator is defined for enumerations. In particular, arithmetic operations are not defined. However, enumerators can be automatically converted to `int` type, but `int` types are not converted automatically to the enumeration type:
+
+```cpp
+int color = blue;           // valid, spectrum type promoted to int
+spectrum band;
+band = 3;                   // invalid, int not converted to spectrum
+color = 3 + red;            // valid, red converted to int
+```
+
+### Allocating Memory with `new`
+
+In C, you can allocate memory with the library function `malloc()`. You can still so so in C++, but C++ provides a better way: the `new` operator.
+
+```cpp
+int *pn = new int;
+```
+
+The `new int` part tells the program you want some new storage suitable for holding an `int`. The `new` operator uses the type to figure out how many bytes are needed. Then it finds the memory and returns teh address.he
+
+### Freeing memory with `delete`
+
+You can free memory with `delete`:
+
+```cpp
+int *ps = new int;
+...
+delete ps;
+```
+
+### Use `new` to Create Dynamic Arrays
+
+```cpp
+int *psome = new int[10];
+```
+
+### Use `delete` to Free Dynamic Arrays
+
+```cpp
+delete [] psome;
+```
+
+### Pointer and Array
+
+Array name denotes the address of the starting element of the array. We have that `pointername[i] == *(pointername + i)`. Thus, in many cases we can use pointer names and array names in the same way.
+
+However, there are two major differences between pointer names and array names. The first one is that array name is a constant, so you cannot change it. But pointername is changeable:
+
+```cpp
+pointername = pointername + 1;      // valid
+arrayname = arrayname + 1;          // not allowed
+```
+
+A second difference is that applying the `sizeof` operator to an array name yields the size of the array, even if the pointer points to an array. But applying the `sizeof` operator to array names produce the size of the array. For example:
+
+```cpp
+double wages[3] = {10000.0, 20000.0, 30000.0};
+double *pw = wages;                 
+
+cout << sizeof(wages) << " = size of wages array\n";
+cout << sizeof(pw) << " = size of pw pointer\n";
+```
+
+Running result:
+
+```
+24 = size of wages array
+4 = size of pw pointer
+```
+
+### Pointer and String
+
+``` cpp
+char animal[20] = "bear";           // animal holds bear
+char *ps = animal;
+cout << animal << " at " << (int *) animal << endl;
+cout << ps << " at " << (int *) ps << endl;
+```
+
+Output:
+
+``` 
+bear at 0x61fdf0
+bear at 0x61fdf0
+```
+
+Normally, if you give `cout` a pointer, it prints an address. But if the pointer is type `char *`, `cout` displays the pointer-to string. If you want to see the address of the string, you have to type cast the pointer to another pointer type, such as `int *`, as the example above shows.
+
+### The `vector` Template Class
+
+The `vector` template class is similiar to the `string` class in that it is a dynamic array. Basically, it's an alternative to using `new` to create a dynamic array.
+
+We'll pay attention to 5 aspects of the `vector` class: 
+
+1. To use a `vector` class, you need to include the `vector` header file.
+2. The `vector` identifier is part of the `std` namespace, so you can use a `using` directive, a `using` declaration, or `std::vector`.
+3. Templates use a different syntax to indicate the type of data stored.
+4. The `vector` class uses a different syntax to indicate the number of elements.
+
+```cpp
+using namespace std;
+vector<int> vi;         // create a zero-size array of int
+int n;
+cin >> n;
+vector<double> vd(n);   // create an array of n doubles
+```
+
+### The `array` Template Class (C++11)
+
+Compared to `vector`, the built-in array type is a bit more efficient, but it comes at a cost of leesened convenience and safety. To solve this problem, C++11 adds the `array` template class. To create an `array` object, you need to include the `array` header file. Also it is in namespace `std`.
+
+``` cpp
+#include <array>
+...
+using namespace std;
+array<int, 5> ai;           // create array object of 5 ints
+array<double, 4> ad = {1.2, 2.1, 3.43, 4.3};
+```
+
