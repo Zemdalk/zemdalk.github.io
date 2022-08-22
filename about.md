@@ -30,6 +30,10 @@ key: page-about
 
 一个有趣的事实：**男澡堂67号位**计费器损坏，而且起步价也不收，可以白嫖。
 
+（2022.08.22 更新）
+
+换了计费规则，重新安了计费器，不能白嫖了（悲）
+
 --------------------2022.05.26--------------------
 
 - **git tutorial**：[https://www.atlassian.com/git/tutorials](https://www.atlassian.com/git/tutorials)
