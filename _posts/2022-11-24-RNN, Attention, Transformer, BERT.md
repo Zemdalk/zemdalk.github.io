@@ -3,7 +3,7 @@ title: RNN, Attention, Transformer, BERT
 tags: A-课程笔记 机器学习
 mathjax: true
 mathjax_autoNumber: true
-key: RNN, Attention, Transformer, BERT
+key: RNN-Attention-Transformer-BERT
 sharing: true
 typora-root-url: ..
 ---
