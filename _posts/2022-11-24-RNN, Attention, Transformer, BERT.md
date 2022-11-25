@@ -122,7 +122,31 @@ decoder与encoder的结构类似，不同的是，在经过第一次Self Attenti
 
 # BERT
 
-【待补充】
+BERT是基于Transformer的自然语言理解(NLP)模型。简单理解就是，BERT会基于输入文本，生成与上下文相关的embedding，既有单词的embedding，又有句子的embedding。
+
+## 如何训练BERT
+
+BERT是一种预训练模型，它的预训练目标就是生成一个好用的NLP模型，因此只用到了Transformer中的encoder。BERT的训练方式主要有两种：
+
+(1) MLM(Masked Language Modeling)。简单地说，BERT会接收一个文本序列，但是序列中有15%的单词被[MASK] token所代替。它的训练目标就是预测出[MASK]之下的单词。
+
+(2) NSP(Next Sentence Prediction)。简单地说，BERT会接收到许多“句子对”，BERT需要判断出每组“句子对”中第二句话是否是第一句话之后应该说的话。这些句子对中有50%有承接关系，另外50%两句话没有关系。
+
+在NSP中，输入文本的第一句话前面会加上一个[CLS]token，每句话的最后会加上一个[SEP]token用以标记。最后[CLS]的输出会被转换成一个2×1的向量，然后送入一个分类层，来确定第二句话是否是第一句话的后继。
+
+## 如何运用BERT
+
+BERT可以用于多种NLP任务，只需要在核心模型之后加上一个layer即可。例如：
+
+(1) 分类任务（例如某个影评是积极的还是消极的）。这种任务和NSP比较像，只需要在[CLS] token的输出后面加上一个分类层即可。
+
+(2) 问答任务。这类任务会针对一个文本做出提问，机器需要根据问题，将正确答案在文本中标记出来。使用BERT来完成这类任务时，可以另外训练两个向量，用于标记文本中正确答案的开始位置和结束位置。
+
+(3) 命名实体识别(NER)任务。这类任务会将一个文本序列输入机器，机器需要标记出文本中的不同命名实体（比如XXX是人物/地点/组织……）。使用BERT来完成这类任务时，只需要把每个token的输出向量放进一个分类层即可。
+
+有个YouTube视频大致演示了如何在python中调用BERT，完成一些简单的任务：
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7kLi8u2dJz0?start=652" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 --- 
 
@@ -132,3 +156,4 @@ decoder与encoder的结构类似，不同的是，在经过第一次Self Attenti
 2. [MIT 6.S191: Recurrent Neural Networks and Transformers - YouTube](https://www.youtube.com/watch?v=QvkQ1B3FBqA&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2&t=6s&ab_channel=AlexanderAmini)
 3. [All you need to know about ‘Attention’ and ‘Transformers’ — In-depth Understanding — Part 1 - Towards Data Science](https://towardsdatascience.com/all-you-need-to-know-about-attention-and-transformers-in-depth-understanding-part-1-552f0b41d021#:~:text=Attention%20helps%20to%20draw%20connections,any%20other%20short%2Drange%20dependencies.)
 4. [十分钟理解Transformer - 知乎](https://zhuanlan.zhihu.com/p/82312421?theme=dark)
+5. [BERT Explained: State of the art language model for NLP - Towards Data Science](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
