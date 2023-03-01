@@ -36,7 +36,7 @@ scp -r {要上传的文件夹名} guest@144.34.247.62:/library/{category}
 
 其中`{category}`是具体某个分类对应的文件夹名称，便于整理。分类有这些：
 
-![Jellyfin1](../assets/images/VPS/Jellyfin1.png)
+![Jellyfin1](/assets/images/VPS/Jellyfin1.png)
 
 例如，如果你要上传电影"The Martian.mkv"，那你应该在该电影所在的文件夹下输入下面的命令：
 
