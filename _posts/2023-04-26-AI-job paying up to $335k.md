@@ -18,7 +18,7 @@ typora-root-url: ..
 
 # 高薪AI工作，年薪可达33.5万美元，无需计算机工程背景
 
-<center><img src="../assets/images/新闻/ChatGPT-prompt-engineer-job.webp" style="width:70%; display:block; margin:auto;"></center>
+<center><img src="/assets/images/新闻/ChatGPT-prompt-engineer-job.webp" style="width:70%; display:block; margin:auto;"></center>
 
 <br>
 
