@@ -20,8 +20,6 @@ typora-root-url: ..
 
 <center><img src="/assets/images/新闻/ChatGPT-prompt-engineer-job.webp" style="width:70%; display:block; margin:auto;"></center>
 
-<br>
-
 > Unlike traditional coding jobs, the prompt engineering role is targeted to anyone with basic programming skills and familiarity with large language models such as ChatGPT or Bard. 
 > 
 > 与传统的程序员工作不同，提示工程师角色针对具有基本编程技能和熟悉大型语言模型（如ChatGPT或Bard）的人。
@@ -86,7 +84,7 @@ It’s part of a **dramatic**[^dramatic] increase in demand for workers who unde
 
 这是对理解和使用AI工具的工作人员需求急剧增加的一部分。根据LinkedIn与TIME分享的数据，提到“生成型AI”的帖子数量与去年相比增加了36倍，包含“GPT”的职位发布在2021年和2022年之间增长了51%。一些职位发布甚至针对任何人，即使没有计算机科学或技术背景。
 
-It’s too soon to tell how big prompt engineering will become, but **a range of**[^aro] companies and industries are beginning to recruit for these positions. Anthropic, a **Google-backed**[^backed] AI **startup**[^startup], is advertising salaries up to \$335,000 for a “Prompt Engineer and Librarian” in San Francisco. Applicants must “have a creative hacker spirit and love solving puzzles,” the listing states. Automated document reviewer Klarity is offering as much as \$230,000 for a machine learning engineer who can “prompt and understand how to produce the best output” from AI tools.
+It’s too soon to tell how big prompt engineering will become, but **a range of**[^aro] companies and industries are beginning to recruit for these positions. Anthropic, a **Google-backed**[^backed] AI **startup**[^startup], is advertising salaries up to $\text{\$}$335,000 for a “Prompt Engineer and Librarian” in San Francisco. Applicants must “have a creative hacker spirit and love solving puzzles,” the listing states. Automated document reviewer Klarity is offering as much as $\text{\$}$230,000 for a machine learning engineer who can “prompt and understand how to produce the best output” from AI tools.
 
 [^aro]: **a range of** 一系列。
 [^backed]: **Google-backed** 由谷歌支持的。back有提供资助、支持的意思。例如："The government has backed a new initiative to promote renewable energy."（政府支持一个推广可再生能源的新举措。）
