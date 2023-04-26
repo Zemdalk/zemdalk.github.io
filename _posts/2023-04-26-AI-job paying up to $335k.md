@@ -62,9 +62,11 @@ Anna Bernstein, a 29-year-old prompt engineer at generative AI firm Copy$.$ai in
 
 伯恩斯坦说：“我们这些提示工程师并不多，很长一段时间里，我真的觉得只有我一个人。”她于2021年9月加入Copy$.$ai，正是OpenAI的ChatGPT因其优雅的写作能力和回答几乎任何问题的能力而广为人知之前的一年。“当时，‘提示工程师’这个词还不存在，他们甚至不确定这样的职位是否可能存在。”
 
-Bernstein, who studied English in college, was a **copywriter**[^copywriter] and historical research assistant before becoming a prompt engineer. “I had no tech background whatsoever,” she says. “But to have a humanities background in this field seems to me like a triumph, especially since part of the point of developing AI is to imitate human thought.”
+Bernstein, who studied English in college, was a **copywriter**[^copywriter] and historical research assistant before becoming a prompt engineer. “I had no tech background whatsoever,” she says. “But to have a humanities background in this field seems to me like a **triumph**[^triumph], especially since part of the point of developing AI is to **imitate**[^imitate] human thought.”
 
 [^copywriter]: **copywriter** 撰稿人。具体来说，copywriter的主要工作是根据客户的要求，为产品、服务或品牌撰写各种广告宣传文案，例如广告语、广告词、网页内容、电视广告、户外广告、新闻稿、宣传册等等。这里的"copy-"有"文案"的意思。
+[^triumph]: **triumph** 胜利，凯旋。
+[^imitate]: **imitate** 模仿。
 
 伯恩斯坦在大学时期学习英语，之前是一名撰稿人和历史研究助理，后来成为了一名提示工程师。“我之前根本没有技术背景，”她说。“但在这个领域拥有人文背景对我来说似乎是一种胜利，尤其是考虑到开发AI的部分目的是模仿人类思维。”
 
@@ -108,7 +110,7 @@ But despite the engineering **moniker**[^moniker] in the job title, Bernstein sa
 
 ## 如何成为提示工程师
 
-Rob Lennon, an expert in prompt engineering, began teaching paid online courses through Kajabi in December designed to help the **average**[^average] person learn the skills needed for a job in the field. His two courses, which around 2,000 students have already taken, **demonstrate**[^demonstrate] how to format and structure prompts for different types of tasks and domains. “People are **clamoring**[^clamoring] for this knowledge,” Lennon says. “It’s kind of like first mover’s advantage.” The courses start at \$150 and can cost up to \$3,970 for **custom**[^custom] training and course certification.
+Rob Lennon, an expert in prompt engineering, began teaching paid online courses through Kajabi in December designed to help the **average**[^average] person learn the skills needed for a job in the field. His two courses, which around 2,000 students have already taken, **demonstrate**[^demonstrate] how to format and structure prompts for different types of tasks and domains. “People are **clamoring**[^clamoring] for this knowledge,” Lennon says. “It’s kind of like first mover’s advantage.” The courses start at <span>&#36;</span>150 and can cost up to <span>&#36;</span>3,970 for **custom**[^custom] training and course certification.
 
 [^average]: **average** 普通的，一般的，平均水平的。
 [^demonstrate]: **demonstrate** 演示，展示。
@@ -141,7 +143,7 @@ Mollick notes that those interested in exploring this field should try experimen
 
 莫利克指出，那些有兴趣探索这个领域的人应该尝试使用大型语言模型（如GPT+和Bard）来了解他们自己的提示开发方法，而不是参加在线课程。这是因为AI系统变化如此之快，今天有效的提示在未来可能就不管用了。“我担心的是人们认为提示有什么神奇的秘密，”他说。
 
-Given the high interest in AI jobs, Karin Kimbrough, chief economist at LinkedIn, says employers may quickly find that they need to compete with one another to hire **talent**[talent] to fill these emerging open roles, particularly if they continue to focus on hiring applicants with specific degrees or past job titles. “Given how **late-breaking**[^lb] all of this is, it’s important to **approach**[^approach] these newly developed roles with a skills-first mindset, by focusing on the actual skills required to do the job,” she says.
+Given the high interest in AI jobs, Karin Kimbrough, chief economist at LinkedIn, says employers may quickly find that they need to compete with one another to hire **talent**[^talent] to fill these emerging open roles, particularly if they continue to focus on hiring applicants with specific degrees or past job titles. “Given how **late-breaking**[^lb] all of this is, it’s important to **approach**[^approach] these newly developed roles with a skills-first mindset, by focusing on the actual skills required to do the job,” she says.
 
 [^talent]: **talent** 人才。
 [^lb]: **late-breaking** 最近的，最新发生的。例句：<br>"The late-breaking news from the White House caused a stir among journalists."（白宫突然发布的新闻在记者中引起轰动。）<br>"The researchers presented late-breaking results from their study of the virus."（研究人员介绍了他们研究病毒的最新成果。）
