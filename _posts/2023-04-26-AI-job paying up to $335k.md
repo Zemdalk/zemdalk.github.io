@@ -3,7 +3,7 @@ title: 《时代周刊》 ：高薪AI工作，年薪可达33.5万美元，无需
 tags: A-生活随笔 翻译 新闻 AI ChatGPT
 mathjax: true
 mathjax_autoNumber: true
-key: 《纽约时报》：布基纳法索前领导人因谋杀其前任托马斯·桑卡拉被判有罪
+key: 《时代周刊》 ：高薪AI工作，年薪可达33.5万美元，无需计算机工程背景
 sharing: true
 typora-root-url: ..
 ---
