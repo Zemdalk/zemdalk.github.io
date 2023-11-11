@@ -9,6 +9,7 @@ typora-root-url: ..
 ---
 
 > 给定函数$f: \mathbb{R}^{m\times n}\to\mathbb{R}$，如何计算它的导数呢？
+> 
 > 参考：[矩阵求导术（上） - 知乎](https://zhuanlan.zhihu.com/p/24709748)
 
 <!--more-->
